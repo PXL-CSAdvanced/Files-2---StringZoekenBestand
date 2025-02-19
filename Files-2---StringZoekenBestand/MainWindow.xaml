@@ -1,0 +1,42 @@
+﻿<Window x:Class="Files_2___StringZoekenBestand.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Files_2___StringZoekenBestand"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Margin="20">
+            <Label x:Name="fileLabel" Content="Bestand" FontStyle="Italic"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="8*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="fileTextBox" Grid.Column="0" Text=""/>
+                <Button x:Name="browseButton" Grid.Column="1" Content="Bladeren" Click="Button_Click" Width="100"/>
+            </Grid>
+            <Label x:Name="searchStringLabel" Content="String" FontStyle="Italic"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="8*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="searchStringTextBox" Grid.Column="0" Text=""/>
+                <Button x:Name="searchButton" Grid.Column="1" Content="Zoeken" Click="BtnZoeken_Click" Width="100"/>
+            </Grid>
+        </StackPanel>
+        <TextBox x:Name="resultTextBox" Grid.Row="1" Grid.Column="0" Margin="20"/>
+    </Grid>
+</Window>
